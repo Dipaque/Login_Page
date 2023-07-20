@@ -1,0 +1,157 @@
+img {
+  max-width: 30%;
+  max-height: 30%;
+}
+
+
+.first-grid-text {
+  position: absolute;
+  font-family: Arvo;
+  padding-left: 34%;
+  box-sizing: border-box;
+  font-size: 90%;
+
+}
+
+.first-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
+}
+
+.first-grid-element {
+  position: relative;
+  border: none;
+  background-color: grey;
+}
+
+.navbar .navbar-toggler {
+  border: 0 solid #ffff;
+}
+
+.navbar .navbar-toggler:focus,
+.navbar .navbar-toggler:active,
+.navbar .navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+
+}
+
+body {
+  background-color: #ffff;
+}
+
+.homesection {
+  color: grey;
+  font-family: 'Jost', sans-serif;
+  font-size: larger;
+}
+
+.booknow {
+  border: none;
+  border-radius: 25px;
+  border: 1px #436E8E solid;
+  background-color: #ffff;
+  color: #436E8E;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-family: Jost;
+  font-size: large;
+  text-decoration: none;
+  transition: 0.2s ease-in;
+}
+
+.booknow:hover {
+  color: white;
+  background-color: #436E8E;
+}
+
+card {
+  display: inline-block;
+}
+
+.carddetails {
+  font-family: Jost;
+  font-size: 125%;
+  line-height: 120%;
+}
+
+.servecard {
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.image {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+.service {
+  font-family: 'Jost', sans-serif;
+  color: black;
+}
+
+.loginPage {
+  color: grey;
+  font-family: 'Jost', sans-serif;
+}
+
+.input {
+  border: 2px solid grey;
+  width: 60%;
+  height: 3rem;
+  padding-left: 20%;
+  border-radius: 25px;
+  margin-left: 20%;
+}
+
+input:focus {
+  outline: #436E8E;
+  border: 2px solid #436E8E;
+}
+
+.loginbtn {
+  border: none;
+  background-color: none;
+  border: 2px solid #436E8E;
+  background-color: #436E8E;
+  color: #ffff;
+  width: 60%;
+  height: 3rem;
+  border-radius: 25px;
+  margin-left: 20%;
+}
+
+@media(max-width:576px) {
+  .input  {
+    margin-left: 10%;
+    width: 80%;
+  }
+}
+@media(max-width:576px) {
+  .loginbtn  {
+    margin-left: 10%;
+    width: 80%;
+  }
+}
+.loginbtn:hover{
+  background-color: #5e89ab;
+  border-color: #5e89ab;
+}
+a.signUpLink{
+  text-decoration: none;
+  color: grey;
+}
+a.signUpLink:hover :active{
+  text-decoration: none;
+  color:#436E8E;
+}
+#message{
+  transition: ease-in;
+}

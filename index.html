@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Service</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Jost';
+      color: grey;
+    }
+  </style>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/4dcf6ccd52.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
+    integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+    integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+
+  <!-- Firebase -->
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <!-- JS -->
+  <script defer src="index.js"></script>
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Eczar:wght@800&family=Jost&family=Poppins:wght@700&family=Wix+Madefor+Display&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Eczar:wght@800&family=Jost&family=Poppins:wght@700&family=Wix+Madefor+Display&display=swap"
+    rel="stylesheet">
+  <!-- Bootsrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="container-fluid  navbar bg-light  navbar-light navbar-nav-scroll fixed-top navbar-expand-xl navbar-light "
+    data-spy="affix" data-offset-top="0" style="font-family:'Jost',sans-serif;">
+
+    <div class="container">
+
+      <a href="index.html" class="navbar-brand"><img src="navbarlogo_prev_ui.png" alt="logo" width="170px">
+
+      </a>
+
+      <button class="navbar-toggler navbar-danger " type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+        <span class=" navbartoggler  navbar-toggler-icon">
+
+        </span>
+
+      </button>
+
+      <div class="collapse navbar-collapse" id="mynavbar">
+
+        <ul class="navbar-nav navlink ms-auto mt-2 mt-md-0 ">
+          <li class="nav-item text-center">
+            <a class="nav-link  ps-4 pe-4" href="index.html#section1"><i class="fa-solid fa-magnifying-glass"></i></a>
+          </li>
+          <li class="nav-item text-center">
+            <a class="nav-link   ps-4 pe-4 " href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item text-center">
+            <a class="nav-link  ps-4 pe-4" href="index.html#section1">Service</a>
+          </li>
+
+          <li class="nav-item text-center">
+            <a class="nav-link  ps-4 pe-4" href="index.html#section1">Hire</a>
+          </li>
+
+          <li class="nav-item text-center">
+            <a class="nav-link  ps-4 pe-4" href="index.html#section1">Contribute</a>
+          </li>
+          <li class="nav-item text-center">
+            <a class="nav-link  ps-4 pe-4" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-3 loginPage">
+    <div class="row">
+      <div class="col-lg-6 d-none d-lg-block pt-5">
+        <img src="login.jpg" alt="login" style="max-height: 100%; max-width: 100%;">
+      </div>
+      <div id="form" class="col-lg-6 px-auto p-4 ">
+        <h4 class="text-center mt-5" style="font-family: 'Poppins'; color: #436E8E;"><b>Welcome back!</b></h4>
+        <input class="mt-5 input  ps-3" type="email" name="email" id="uemail" placeholder="Enter your Email">
+        <input class="mt-3 input empty ps-3" type="password" name="password" id="upass" placeholder="Enter password">
+        <i class="fa-regular fa-eye" id="eyeToggle" style="margin-left: -35px; cursor: pointer;" ></i>
+        <button class="loginbtn mt-3" id="login" onclick=" login();reset()">Login</button>
+        <p class="text-center mt-3 mb-3">-or-</p>
+        <div class=" input   p-2 py-auto" style="cursor: pointer;" id="google-sign-in-button">
+          <svg class="ms-2 me-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 32 32" width="24" height="24">
+            <defs>
+              <path id="A"
+                d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z" />
+            </defs>
+            <clipPath id="B">
+              <use xlink:href="#A" />
+            </clipPath>
+            <g transform="matrix(.727273 0 0 .727273 -.954545 -1.45455)">
+              <path d="M0 37V11l17 13z" clip-path="url(#B)" fill="#fbbc05" />
+              <path d="M0 11l17 13 7-6.1L48 14V0H0z" clip-path="url(#B)" fill="#ea4335" />
+              <path d="M0 37l30-23 7.9 1L48 0v48H0z" clip-path="url(#B)" fill="#34a853" />
+              <path d="M48 48L17 24l-4-3 35-10z" clip-path="url(#B)" fill="#4285f4" />
+            </g>
+          </svg>
+          Sign in with Google
+        </div>
+        <p id="loginMessage" class="text-center mt-3 mb-3">Don't have an account? <a class="signUpLink"
+            href="signUp.html"> Sign up now</a></p>
+      </div>
+    </div>
+  </div>
+  <script>
+  
+    // Password visibility
+var eye=document.getElementById('eyeToggle');
+var count=0;
+    countClick=()=>{
+      if(eye.onclick)
+        count++;
+    return count;
+    }
+
+passwordVisible=()=>{
+  let count=countClick();
+  var passwordType=document.getElementById('upass');
+  if(count%2==1){
+  if(passwordType.type==="password"){
+    passwordType.type='text';
+    eye.className="fa-regular fa-eye-slash"
+  }
+
+  }
+ else{
+    passwordType.type="password";
+    eye.className="fa-regular fa-eye"
+  }
+}
+eye.onclick=passwordVisible;
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
